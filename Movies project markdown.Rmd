@@ -593,7 +593,7 @@ Compare performance of movies with:
 
 ```{r Success Rate by Cast Type}
 # Count non-NA cast members
-cast_analysis <- clean_movie_data %>%
+cast_analysis <- movie_data %>%
   mutate(
     Cast_Size = rowSums(!is.na(select(., starts_with("Cast")))),
     Cast_Type = case_when(
